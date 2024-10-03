@@ -1,0 +1,31 @@
+{
+  "name": "Whatsapp Translater",
+  "description": "Translate your whatsapp messages",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "src/popup.html",
+    "default_icon": "icons/translation-logo-128.png"
+  },
+  "icons": {
+    "128": "icons/translation-logo-128.png"
+  },
+  "permissions": ["activeTab", "storage", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["https://web.whatsapp.com/"],
+      "run_at": "document_end",
+      "js": ["src/contentScript.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "src/service-worker.js"
+  },
+  "host_permissions": ["https://microsoft-translator-text.p.rapidapi.com/*"],
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/translation.png"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

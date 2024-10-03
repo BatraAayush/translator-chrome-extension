@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="w-[20rem] flex flex-col items-center py-4">
+      <div class="flex gap-4">
+        <h1 class="text-xl font-bold font-serif">WA Translator</h1>
+        <img src="../icons/translation.png" class="w-8 h-8 text-white" />
+      </div>
+
+      <div class="flex gap-4 items-end mt-4">
+        <div class="flex flex-col items-center">
+          <label class="text-sm">From</label>
+          <select
+            id="from"
+            class="border border-black px-2 py-1 mt-1 rounded-md"
+          ></select>
+        </div>
+        <button class="flex items-center justify-center">
+          <img class="w-6 h-6" src="../icons/transfer.png" />
+        </button>
+        <div class="flex flex-col items-center">
+          <label class="text-sm">To</label>
+          <select
+            id="to"
+            class="border border-black px-2 py-1 mt-1 rounded-md"
+          ></select>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
